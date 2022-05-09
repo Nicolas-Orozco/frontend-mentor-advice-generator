@@ -1,11 +1,15 @@
 import React from "react";
+import Advice from "./components/Advice";
+import Divider from "./components/Divider";
 import Button from "./components/Button";
 
 function App() {
   return (
-    <form className="relative max-w-lg p-5 m-6 rounded-lg bg-blue-200 flex flex-col">
+    <section className="max-w-lg p-5 m-4 rounded-lg bg-blue-200 font-manrope flex flex-col items-center justify-center flex-1">
+      <Advice />
+      <Divider />
       <Button />
-    </form>
+    </section>
   );
 }
 
