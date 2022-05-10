@@ -4,6 +4,7 @@ import AppContext from "./components/AppContext";
 import Label from "./components/Label";
 import Advice from "./components/Advice";
 import Divider from "./components/Divider";
+import Attribution from "./components/Attribution";
 import Button from "./components/Button";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Divider />
         <Button />
       </section>
+      <Attribution />
     </AppContext.Provider>
   );
 }
