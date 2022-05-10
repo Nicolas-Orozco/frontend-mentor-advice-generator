@@ -17,6 +17,7 @@
   },
   "plugins": ["react"],
   "rules": {
-    "prettier/prettier": ["error", { "semi": true }]
+    "prettier/prettier": ["error", { "semi": true }],
+    "no-nested-ternary": ["off"]
   }
 }

@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useMemo } from "react";
+import useAxios from "axios-hooks";
+import AppContext from "./components/AppContext";
 import Label from "./components/Label";
 import Advice from "./components/Advice";
 import Divider from "./components/Divider";
 import Button from "./components/Button";
 
 function App() {
+  const [{ data, loading, error }, refetch] = useAxios(
+    "https://api.adviceslip.com/advice"
+  );
   return (
-    <section className="max-w-lg p-5 m-4 rounded-lg bg-blue-200 font-manrope flex flex-col items-center justify-center flex-1">
-      <Label />
-      <Advice />
-      <Divider />
-      <Button />
-    </section>
+    <AppContext.Provider
+      value={useMemo(
+        () => ({ data, loading, error, refetch }),
+        [data, loading, error, refetch]
+      )}
+    >
+      <section className="max-w-lg p-5 m-4 rounded-lg bg-blue-200 font-manrope flex flex-col items-center justify-center flex-1">
+        <Label />
+        <Advice />
+        <Divider />
+        <Button />
+      </section>
+    </AppContext.Provider>
   );
 }
 
