@@ -23,7 +23,11 @@ function Button() {
       aria-disabled={isDisabled}
       disabled={isDisabled}
     >
-      <Logo aria-hidden="true" tabIndex="0" className="m-auto" />
+      <Logo
+        aria-hidden="true"
+        tabIndex="0"
+        className="m-auto pointer-events-none"
+      />
       <span className="h-[1px] w-[1px] overflow-hidden absolute">
         Click for advice
       </span>
