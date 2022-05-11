@@ -14,6 +14,11 @@ function Advice() {
           : data && data.slip.advice}
         &quot;
       </h2>
+      <div
+        aria-label="Advice divider"
+        role="img"
+        className="w-full h-6 bg-contain bg-center bg-no-repeat bg-[url('/src/assets/pattern-divider-mobile.svg')] lg:bg-[url('/src/assets/pattern-divider-desktop.svg')]"
+      />
     </header>
   );
 }
