@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import AppContext from "./AppContext";
-import { ReactComponent as Logo } from "../assets/icon-dice.svg";
+import Logo from "../assets/icon-dice.svg";
 
 function Button() {
   const [isDisabled, setIsDisabled] = useState(false);
@@ -23,9 +23,9 @@ function Button() {
         }}
         disabled={isDisabled}
       >
-        <Logo
-          aria-hidden="true"
-          tabIndex="-1"
+        <img
+          src={Logo}
+          alt="Dice button"
           className="m-auto pointer-events-none"
         />
         <span className="h-[1px] w-[1px] overflow-hidden absolute">
